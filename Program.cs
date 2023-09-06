@@ -46,3 +46,22 @@ Console.WriteLine("\nTask 23");
 // чисел от 1 до N.
 // 3 -> 1, 4, 9
 // 5 -> 1, 8, 27, 64, 125
+
+Console.WriteLine("Type a number N: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int[] array = new int[n];
+int number = 1;
+int index = 0;
+
+while(index<n)
+{
+    array[index]=number*number;
+    index+=1;
+    number+=1;
+}
+
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine(array[i]);
+}
