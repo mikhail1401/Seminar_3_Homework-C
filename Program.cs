@@ -3,18 +3,24 @@
 // является ли оно палиндромом
 // 14212 -> No     23432 -> Yes    12821 -> Yes
 
-int num = new Random().Next(10000, 100000);
-Console.WriteLine($"The initial number is {num}");
+Console.WriteLine("Enter a 5 digit number: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-if ((num/10000==num%10)&&(num/1000%10==num/10%10))
+if (num>=10000&&num<100000)
 {
-    Console.WriteLine($"{num} is a palindrome");
+    if ((num/10000==num%10)&&(num/1000%10==num/10%10))
+    {
+        Console.WriteLine($"{num} is a palindrome");
+    }
+    else
+    {
+        Console.WriteLine($"{num} isn't a palindrome");
+    }
 }
 else
 {
-    Console.WriteLine($"{num} isn't a palindrome");
+    Console.WriteLine("The number you have entered isn't a 5 digit number.");
 }
-
 
 Console.WriteLine("\nTask 21");
 // Напишите программу, которая принимает на вход координаты двух точек и находит
